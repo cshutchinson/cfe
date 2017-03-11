@@ -2,22 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import App from './modules/App';
 import { createHistory } from 'history';
-import { Router, Route, hashHistory } from 'react-router';
-
-/* const browserHistory = hashHistory(createHistory)({
- *   basename: '/foo/bar'
- * });*/
-
-
-import About from './modules/About';
-import Repos from './modules/Repos';
+import { Router, Route, browserHistory } from 'react-router';
 
 render((
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/repos" component={Repos}/>
-      <Route path="/about" component={About}/>
-      <Route path="*" component={App} />
     </Route>
   </Router>
 ), document.getElementById('app'));
