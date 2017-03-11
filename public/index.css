@@ -12,10 +12,19 @@
   background-color: black;
   border: 2px solid black;
   border-radius:7px;
+  margin: 2px;
 }
 
-.active {
-  color: green;
+.emptyface {
+  background-color: white;
+  border: 0px;
+}
+
+.cubenet {
+  width: 765px;
+  height: 765px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
