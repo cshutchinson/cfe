@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku": "webpack && PORT=8080 node server.js",
+    "heroku": "PORT=8080 node server.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "webpack-dev-server --inline --content-base public  --history-api-fallback",
     "start:prod": "webpack && node server.js"
