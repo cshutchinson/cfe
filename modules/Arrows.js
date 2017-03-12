@@ -10,11 +10,6 @@ class Arrow extends Component {
             face: `${faceId}`,
             direction: '0'
         }));
-        console.log('Dispatched CW face: ', {
-            cube: cube.cube,
-            face: `${faceId}`,
-            direction: '0'
-        });
     }
 
     handleClickCcw() {
@@ -24,11 +19,6 @@ class Arrow extends Component {
             face: `${faceId}`,
             direction: '1'
         }));
-        console.log('CCW face: ', {
-            cube: cube.cube,
-            face: `${faceId}`,
-            direction: '1'
-        });
     }
 
     render() {

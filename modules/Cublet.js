@@ -6,7 +6,6 @@ export default class Cublet extends Component {
 
     render() {
         const { color, facePosition, isCenter  } = this.props;
-
         const colorStyle = {
             backgroundColor: Colors[color]
         };

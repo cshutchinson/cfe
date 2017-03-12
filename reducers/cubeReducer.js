@@ -10,19 +10,17 @@ const initialState = {
         bottom: "444444444",
         back: "555555555"
     },
-    isFetching: false
+    isFetching: true
 };
 
 export default function cube (state=initialState, action) {
     switch (action.type) {
         case REQUEST_CUBE:
-            return [...state,
-                Object.assign({}, action.cube)
-            ];
+            return Object.assign({}, action.request.cube);
         case RECEIVE_CUBE:
+            console.log('action on receive cube: ' , action);
             return Object.assign({}, state, {
-                isFetching: false,
-                cube: action
+                cube: action.cube
             });
         default:
             return state;
