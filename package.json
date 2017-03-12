@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "webpack",
+    "heroku-prebuild": "node ./node_modules/webpack/bin/webpack.js",
     "heroku": "node server.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:dev": "webpack-dev-server --inline --content-base public  --history-api-fallback",
