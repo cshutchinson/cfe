@@ -20,7 +20,7 @@ function receiveCube(json) {
 }
 
 export function fetchCube(request) {
-    const url = process.env.URL === undefined ? 'http://localhost:8070':process.env.URL;
+    const url = process.env.HOST_URL === undefined ? 'http://localhost:8070':process.env.HOST_URL;
 
     return function (dispatch) {
         dispatch(requestCube(request));
