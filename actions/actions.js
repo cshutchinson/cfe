@@ -20,9 +20,10 @@ function receiveCube(json) {
 }
 
 export function fetchCube(request) {
+    const url = process.env.URL === undefined ? 'http://localhost:8070':process.env.URL;
     return function (dispatch) {
         dispatch(requestCube(request));
-        return axios.post('http://localhost:8070/rotate', (request))
+        return axios.post(`${url}/rotate`, (request))
             .then((response) => {
                 dispatch(receiveCube(response.data));
             })

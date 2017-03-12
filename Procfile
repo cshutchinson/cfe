@@ -1,1 +1,1 @@
-web: NODE_ENV=production && npm run start
+web: NODE_ENV=production URL=https://cubeworks.herokuapp.com && npm run start
