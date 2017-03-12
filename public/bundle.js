@@ -22414,7 +22414,7 @@
 /* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -22447,7 +22447,7 @@
 	}
 
 	function fetchCube(request) {
-	    var url = process.env.HOST_URL === undefined ? 'http://localhost:8070' : process.env.HOST_URL;
+	    var url = 'https://cubefe.herokuapp.com/';
 
 	    return function (dispatch) {
 	        dispatch(requestCube(request));
@@ -22456,7 +22456,6 @@
 	        });
 	    };
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
 /* 204 */
