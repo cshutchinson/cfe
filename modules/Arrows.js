@@ -1,12 +1,34 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux'
+import * as cubeActions from '../actions/actions'
 
-export default class Arrow extends Component {
+class Arrow extends Component {
     handleClickCw() {
-        console.log('CW face: ', this.props.faceId);
+        const { dispatch, cube , faceId} = this.props;
+        dispatch(cubeActions.fetchCube({
+            cube: cube.cube,
+            face: `${faceId}`,
+            direction: '0'
+        }));
+        console.log('Dispatched CW face: ', {
+            cube: cube.cube,
+            face: `${faceId}`,
+            direction: '0'
+        });
     }
 
     handleClickCcw() {
-        console.log('CCW face: ', this.props.faceId);
+        const { dispatch, cube , faceId} = this.props;
+        dispatch(cubeActions.fetchCube({
+            cube: cube.cube,
+            face: `${faceId}`,
+            direction: '1'
+        }));
+        console.log('CCW face: ', {
+            cube: cube.cube,
+            face: `${faceId}`,
+            direction: '1'
+        });
     }
 
     render() {
@@ -18,3 +40,11 @@ export default class Arrow extends Component {
         )
     }
 }
+
+function mapStateToProps (state) {
+    return {
+        cube: state.cube
+    };
+}
+
+export default connect(mapStateToProps)(Arrow);
