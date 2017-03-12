@@ -7,16 +7,16 @@ export default class IsometricCube extends Component {
         return (
             <div className="cubenet">
                 <div className="face emptyface" />
-                <Face id={5} faceColors={[0,0,0,0,0,0,0,0,0]} />
+                <Face faceId={5} faceColors={[0,0,0,0,0,0,0,0,0]} />
                 <div className="face emptyface"/>
-                <Face id={1}  faceColors={[1,1,1,1,1,1,1,1,1]} />
-                <Face id={0}  faceColors={[2,2,2,2,2,2,2,2,2]} />
-                <Face id={2}  faceColors={[3,3,3,3,3,3,3,3,3]} />
+                <Face faceId={1}  faceColors={[1,1,1,1,1,1,1,1,1]} />
+                <Face faceId={0}  faceColors={[2,2,2,2,2,2,2,2,2]} />
+                <Face faceId={2}  faceColors={[3,3,3,3,3,3,3,3,3]} />
                 <div className="face emptyface" />
-                <Face id={3}  faceColors={[4,4,4,4,4,4,4,4,4]} />
+                <Face faceId={3}  faceColors={[4,4,4,4,4,4,4,4,4]} />
                 <div className="face emptyface" />
                 <div className="face emptyface" />
-                <Face id={4}  faceColors={[5,5,5,5,5,5,5,5,5]} />
+                <Face faceId={4}  faceColors={[5,5,5,5,5,5,5,5,5]} />
             </div>
         )
     }

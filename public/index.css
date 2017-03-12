@@ -17,7 +17,7 @@
 
 .emptyface {
   background-color: white;
-  border: 0px;
+  border: 2px solid transparent;
 }
 
 .cubenet {
@@ -25,6 +25,29 @@
   height: 765px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.cw {
+  display: inline-block;
+  margin: 5px;
+  float: right;
+  font-size: 20px;
+  color: black;
+}
+
+.cw:hover {
+  color: white;
+}
+
+.ccw {
+  display: inline-block;
+  margin: 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.ccw:hover {
+  color: white;
 }
 
 

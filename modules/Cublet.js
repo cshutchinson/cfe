@@ -5,7 +5,7 @@ import { FacePositions } from './FacePositions'
 export default class Cublet extends Component {
 
     render() {
-        const { color, facePosition } = this.props;
+        const { color, facePosition, isCenter  } = this.props;
 
         const colorStyle = {
             backgroundColor: Colors[color]
@@ -14,7 +14,9 @@ export default class Cublet extends Component {
         const cubletClasses = 'cublet ' + FacePositions[facePosition];
 
         return (
-            <div className={cubletClasses} style={colorStyle} />
+            <div className={cubletClasses} style={colorStyle}>
+                {this.props.children}
+            </div>
         )
     }
 }
