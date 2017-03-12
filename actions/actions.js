@@ -20,7 +20,7 @@ function receiveCube(json) {
 }
 
 export function fetchCube(request) {
-    const url = process.env.HOST_URL === undefined ? 'http://localhost:8070':process.env.HOST_URL;
+    const url = 'https://cubefe.herokuapp.com/';
 
     return function (dispatch) {
         dispatch(requestCube(request));
