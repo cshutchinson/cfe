@@ -23,21 +23,21 @@ class CubeNet extends React.Component {
 
     }
 
-    handleChange() {
-        console.log(this.props.store.getState());
-    }
-
     render() {
-
-        const { cube } =  this.state;
+        let cube;
+        if(this.props.cube===undefined){
+             cube = this.state.cube;
+        } else {
+            cube = this.props.cube;
+        }
 
         return <div className="cubenet">
             <div className="face emptyface" />
-            <Face faceId={5} faceColors={cube.back.split('')} />
+            <Face faceId={5} xtraClass={'rotate180'} faceColors={cube.back.split('')} />
             <div className="face emptyface"/>
-            <Face faceId={1}  faceColors={cube.left.split('')} />
+            <Face faceId={1} xtraClass={'rotate90'} faceColors={cube.left.split('')} />
             <Face faceId={0}  faceColors={cube.top.split('')} />
-            <Face faceId={2}  faceColors={cube.right.split('')} />
+            <Face faceId={2} xtraClass={'rotate270'} faceColors={cube.right.split('')} />
             <div className="face emptyface" />
             <Face faceId={3}  faceColors={cube.front.split('')} />
             <div className="face emptyface" />
@@ -48,9 +48,7 @@ class CubeNet extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log('map state to props state.cube: ', state.cube.cube);
-    return {
-        cube: fetch
+    return { ...state, cube: state.cube.cube
     };
 }
 

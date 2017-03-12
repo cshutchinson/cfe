@@ -5,9 +5,12 @@ import Arrows from './Arrows'
 
 export default class Face extends Component {
     render() {
-        const { faceColors } = this.props;
+        const { faceColors , xtraClass} = this.props;
+
+        const faceClass = 'face ' + xtraClass ;
+
         return (
-            <div className="face">
+            <div className={faceClass}>
             <Cublet color={faceColors[0]} facePosition={0} />
                 <Cublet color={faceColors[1]} facePosition={1} />
                 <Cublet color={faceColors[2]} facePosition={2} />

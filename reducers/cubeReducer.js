@@ -16,12 +16,9 @@ const initialState = {
 export default function cube (state=initialState, action) {
     switch (action.type) {
         case REQUEST_CUBE:
-            return Object.assign({}, action.request.cube);
+            return { ...state , cube: action.request.cube };
         case RECEIVE_CUBE:
-            console.log('action on receive cube: ' , action);
-            return Object.assign({}, state, {
-                cube: action.cube
-            });
+            return { ...state, cube: action.cube };
         default:
             return state;
     }

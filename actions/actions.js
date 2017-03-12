@@ -24,7 +24,6 @@ export function fetchCube(request) {
         dispatch(requestCube(request));
         return axios.post('http://localhost:8070/rotate', (request))
             .then((response) => {
-                console.log('response.data', response.data);
                 dispatch(receiveCube(response.data));
             })
 
