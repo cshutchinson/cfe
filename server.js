@@ -19,7 +19,7 @@ app.get('/*', function(request, response) {
   // response.redirect(301, '/')
 })
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 5000;
 app.listen(PORT, function() {
     console.log('Production Express Server running at localhost:' + PORT);
 })
