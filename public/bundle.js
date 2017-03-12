@@ -22447,7 +22447,7 @@
 	}
 
 	function fetchCube(request) {
-	    var url = 'https://cubefe.herokuapp.com/';
+	    var url = 'https://cubeworks.herokuapp.com';
 
 	    return function (dispatch) {
 	        dispatch(requestCube(request));

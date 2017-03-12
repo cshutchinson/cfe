@@ -20,7 +20,7 @@ function receiveCube(json) {
 }
 
 export function fetchCube(request) {
-    const url = 'https://cubefe.herokuapp.com/';
+    const url = 'https://cubeworks.herokuapp.com';
 
     return function (dispatch) {
         dispatch(requestCube(request));
